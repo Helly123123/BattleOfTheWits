@@ -1,35 +1,46 @@
 <script setup>
 import Header from "./headerInfo.vue";
 import Question from "./question.vue";
+
+import { inject, ref } from "vue";
+
+const round = ref(false);
+const roundOn = () => {
+  round.value = true;
+};
 </script>
 
 <template>
-  <Header />
-  <Question />
-  <section>
-    <section class="answer-variations">
-      <section class="answer-variations-card-cont">
-        <article class="answer-variations-card-lose">
-          <h1 class="answer-title">42</h1>
-        </article>
-        <article class="answer-variations-card-good">
-          <h1 class="answer-title">42</h1>
-        </article>
-        <article class="answer-variations-card">
-          <h1 class="answer-title">42</h1>
-          <img
-            class="enemy-img"
-            src="/main/duel/correctAnswer/enemy.svg"
-            alt="enemy"
-          />
-        </article>
-        <article class="answer-variations-card">
-          <h1 class="answer-title">42</h1>
-        </article>
+  <section v-if="!round">
+    <Header />
+    <Question />
+    <button @click="roundOn" class="next">Далее</button>
+    <div class="answer-variations-cont"></div>
+    <section>
+      <section class="answer-variations">
+        <section class="answer-variations-card-cont">
+          <article class="answer-variations-card-lose">
+            <h1 class="answer-title">42</h1>
+          </article>
+          <article class="answer-variations-card-good">
+            <h1 class="answer-title">42</h1>
+          </article>
+          <article class="answer-variations-card">
+            <h1 class="answer-title">42</h1>
+            <img
+              class="enemy-img"
+              src="/main/duel/correctAnswer/enemy.svg"
+              alt="enemy"
+            />
+          </article>
+          <article class="answer-variations-card">
+            <h1 class="answer-title">42</h1>
+          </article>
+        </section>
+        <button class="next-button">
+          NEXT <img src="/main/duel/correctAnswer/NEXT.svg" alt="next" />
+        </button>
       </section>
-      <button class="next-button">
-        NEXT <img src="/main/duel/correctAnswer/NEXT.svg" alt="next" />
-      </button>
     </section>
   </section>
 </template>
@@ -44,6 +55,19 @@ import Question from "./question.vue";
   z-index: 20;
   opacity: 60%;
   background-color: #040720;
+}
+
+.next {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  color: rgb(223, 167, 167);
+  border: none;
+  color: black;
+  border-radius: 5px;
+  z-index: 100;
 }
 
 .answer-variations-cont {
@@ -166,5 +190,162 @@ import Question from "./question.vue";
   font-size: 22px;
   color: white;
   gap: 240px;
+}
+
+@media screen and (max-width: 390px) {
+  .answer-variations-card {
+    width: 170px;
+    height: 110px;
+  }
+
+  .answer-variations-card-good {
+    width: 170px;
+    height: 110px;
+  }
+
+  .answer-variations-card-lose {
+    width: 170px;
+    height: 110px;
+  }
+
+  .next-button {
+    width: 360px;
+    height: 65px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .answer-variations-card {
+    width: 150px;
+    height: 100px;
+  }
+  .answer-variations-card-good {
+    width: 150px;
+    height: 100px;
+  }
+
+  .answer-variations-card-lose {
+    width: 150px;
+    height: 100px;
+  }
+
+  .next-button {
+    width: 340px;
+    height: 65px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .answer-variations-card {
+    width: 130px;
+    height: 100px;
+  }
+
+  .answer-variations-card-good {
+    width: 130px;
+    height: 100px;
+  }
+
+  .answer-variations-card-lose {
+    width: 130px;
+    height: 100px;
+  }
+
+  .next-button {
+    width: 300px;
+    height: 55px;
+    font-size: 20px;
+    gap: 190px;
+  }
+}
+
+@media screen and (max-height: 890px) {
+  .answer-variations-cont {
+    height: 460px;
+  }
+
+  .answer-variations-card-cont {
+    top: 60%;
+  }
+}
+
+@media screen and (max-height: 840px) {
+  .answer-variations-cont {
+    height: 400px;
+  }
+
+  .answer-variations-card-cont {
+    top: 65%;
+  }
+}
+
+@media screen and (max-height: 780px) {
+  .answer-variations-cont {
+    height: 350px;
+  }
+
+  .answer-variations-card-cont {
+    top: 70%;
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .next-button {
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    gap: 190px;
+    top: 74%;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  .answer-variations-cont {
+    height: 300px;
+  }
+  .answer-variations-card-cont {
+    top: 71%;
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .next-button {
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    gap: 190px;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  .answer-variations-cont {
+    height: 280px;
+  }
+}
+
+@media screen and (max-height: 670px) {
+  .next-button {
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    gap: 190px;
+    top: 72.5%;
+  }
+
+  .answer-variations-card {
+    width: 130px;
+    height: 90px;
+  }
+  .answer-variations-card-lose {
+    width: 130px;
+    height: 90px;
+  }
+
+  .answer-variations-card-good {
+    width: 130px;
+    height: 90px;
+  }
 }
 </style>

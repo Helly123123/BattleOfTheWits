@@ -47,6 +47,7 @@ header {
 .info-cont {
   display: flex;
   align-items: center;
+  gap: 6px;
 }
 
 .user-name {
@@ -94,5 +95,95 @@ header {
 .result {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 420px) {
+  .header-section {
+    gap: 40px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-section {
+    gap: 50px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .header-section {
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .user-name {
+    font-size: 12px;
+  }
+
+  .oponent-name {
+    font-size: 12px;
+  }
+
+  .user-elo {
+    font-size: 18px;
+    margin-top: -10px;
+  }
+
+  .elo-title {
+    font-size: 14px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header-section {
+    gap: 30px;
+    margin-top: 25px;
+  }
+  .user-name {
+    font-size: 10px;
+  }
+
+  .oponent-name {
+    font-size: 10px;
+  }
+
+  .user-elo {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  .elo-title {
+    font-size: 12px;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-section {
+    gap: 20px;
+    margin-top: 25px;
+  }
+  .user-name {
+    font-size: 10px;
+  }
+
+  .oponent-name {
+    font-size: 10px;
+  }
+
+  .user-elo {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  .elo-title {
+    font-size: 12px;
+    margin-top: -10px;
+  }
+
+  .chet {
+    font-size: 24px;
+  }
 }
 </style>

@@ -4,69 +4,69 @@
   <section>
     <article class="theme-win">
       <div class="color-cont">
-        <img src="/main/duel/round/color/green.svg" alt="green" />
-        <img src="/main/duel/round/color/red.svg" alt="red" />
-        <img src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="red" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
       </div>
       <article class="theme">
-        <img src="/main/selectThemes/Science.svg" alt="" />
+        <img class="theme-icon" src="/main/selectThemes/Science.svg" alt="" />
         <h2 class="theme-title">Science</h2>
       </article>
       <div class="color-cont">
-        <img src="/main/duel/round/color/green.svg" alt="green" />
-        <img src="/main/duel/round/color/green.svg" alt="green" />
-        <img src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
       </div>
     </article>
     <article class="theme-win">
       <div class="color-cont">
-        <img src="/main/duel/round/color/green.svg" alt="green" />
-        <img src="/main/duel/round/color/green.svg" alt="red" />
-        <img src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="red" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
       </div>
       <article class="theme">
-        <img src="/main/selectThemes/Science.svg" alt="" />
-        <h2 class="theme-title">
+        <img class="theme-icon" src="/main/selectThemes/Science.svg" alt="" />
+        <h2 class="theme-title-game">
           Games and<br />
           video games
         </h2>
       </article>
       <div class="color-cont">
-        <img src="/main/duel/round/color/green.svg" alt="green" />
-        <img src="/main/duel/round/color/red.svg" alt="green" />
-        <img src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
       </div>
     </article>
     <article class="theme-win">
       <div class="color-cont">
-        <img src="/main/duel/round/color/green.svg" alt="green" />
-        <img src="/main/duel/round/color/red.svg" alt="red" />
-        <img src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="red" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
       </div>
       <article class="theme">
-        <img src="/main/selectThemes/Science.svg" alt="" />
+        <img class="theme-icon" src="/main/selectThemes/Science.svg" alt="" />
         <h2 class="theme-title">Science</h2>
       </article>
       <div class="color-cont">
-        <img src="/main/duel/round/color/red.svg" alt="green" />
-        <img src="/main/duel/round/color/red.svg" alt="green" />
-        <img src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
       </div>
     </article>
     <article class="theme-win">
       <div class="color-cont">
-        <img src="/main/duel/round/color/green.svg" alt="green" />
-        <img src="/main/duel/round/color/red.svg" alt="red" />
-        <img src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="red" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
       </div>
       <article class="theme">
-        <img src="/main/selectThemes/Science.svg" alt="" />
+        <img class="theme-icon" src="/main/selectThemes/Science.svg" alt="" />
         <h2 class="theme-title">Science</h2>
       </article>
       <div class="color-cont">
-        <img src="/main/duel/round/color/red.svg" alt="green" />
-        <img src="/main/duel/round/color/red.svg" alt="green" />
-        <img src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
+        <img class="color" src="/main/duel/round/color/red.svg" alt="green" />
       </div>
     </article>
   </section>
@@ -81,6 +81,13 @@
 }
 
 .theme-title {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: white;
+}
+
+.theme-title-game {
   font-family: "Inter Tight", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -122,5 +129,57 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+@media screen and (max-width: 360px) {
+  .theme-win {
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .theme-win {
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .color {
+    width: 23px;
+  }
+
+  .theme {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .theme-win {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .color {
+    width: 23px;
+  }
+
+  .theme {
+    width: 80px;
+    height: 80px;
+  }
+
+  .theme-icon {
+    width: 30px;
+  }
+
+  .theme-title {
+    font-size: 10px;
+  }
+
+  .theme-title-game {
+    margin-top: 3px;
+    font-size: 10px;
+  }
 }
 </style>

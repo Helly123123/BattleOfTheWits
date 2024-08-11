@@ -10,6 +10,31 @@ import { ref, inject, provide, reactive } from "vue";
 const navigationStation = ref(true);
 const settingsStation = ref(false);
 const supportActive = ref(false);
+const duelStation = ref(false);
+const EnemySy = ref(false);
+const Vibor = ref(false);
+const VibotTwo = ref(false);
+
+const VibotTwoOn = () => {
+  VibotTwo.value = true;
+  console.log("VibotTwo");
+};
+const ViborOn = () => {
+  Vibor.value = true;
+  console.log("Vibor");
+};
+
+const EnemySyOn = () => {
+  EnemySy.value = true;
+  console.log("sds");
+};
+
+const duelStationOn = () => {
+  duelStation.value = true;
+};
+const duelStationOff = () => {
+  duelStation.value = false;
+};
 
 const falseNavigation = () => {
   navigationStation.value = false;
@@ -50,17 +75,35 @@ provide("supportActive", {
   supportOn,
   supportOff,
 });
+
+provide("duelStation", {
+  duelStation,
+  duelStationOn,
+  duelStationOff,
+});
+
+provide("test", {
+  EnemySy,
+  EnemySyOn,
+});
+
+provide("testTwo", {
+  Vibor,
+  ViborOn,
+  VibotTwo,
+  VibotTwoOn,
+});
 </script>
 
 <template>
   <div class="cont">
     <img class="bg-img" src="/bg.svg" alt="" />
   </div>
-  <!-- <Duel /> -->
-  <section class="main-section" v-if="!settingsStation">
+  <Duel v-if="duelStation" />
+  <section class="main-section" v-if="!settingsStation && !duelStation">
     <section class="user-accaunt">
       <UserHeader />
-      <button class="new-game-btn">
+      <button @click="duelStationOn" class="new-game-btn">
         <img src="/main/sword.svg" alt="" />
         NEW GAME
         <img src="/main/sword.svg" alt="" />
@@ -71,7 +114,7 @@ provide("supportActive", {
     <Friends v-else />
   </section>
   <Settings v-if="settingsStation" />
-  <Navigation />
+  <Navigation v-if="!duelStation" />
 </template>
 
 <style scoped>
@@ -80,6 +123,14 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+}
+
+.test-btn-cont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 
 .user-interface-cont {

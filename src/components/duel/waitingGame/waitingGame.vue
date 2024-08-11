@@ -1,20 +1,26 @@
 <script setup>
 import UserIcon from "./userIconWaiting.vue";
 import EnemyFound from "./enemyFound.vue";
+import { ref } from "vue";
+const EnemyFoundSt = ref(false);
+const EnemyFoundOn = () => {
+  EnemyFoundSt.value = true;
+};
 </script>
 
 <template>
-  <section>
-    <!-- <article class="game-timer-cont">
+  <section v-if="!EnemyFoundSt">
+    <article class="game-timer-cont">
       <p class="subtitle-timer">waiting game...</p>
       <h2 class="timer">15</h2>
     </article>
     <UserIcon />
     <article>
-        <button class="cansel-button">CANCEL</button>
-      </article> -->
-      <!-- <EnemyFound/> -->
+      <button class="cansel-button">CANCEL</button>
+    </article>
+    <button class="next" @click="EnemyFoundOn">Далее</button>
   </section>
+  <EnemyFound v-if="EnemyFoundSt" />
 </template>
 
 <style scoped>
@@ -47,7 +53,6 @@ import EnemyFound from "./enemyFound.vue";
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 80px;
-  padding: 17px 28px;
   width: 388px;
   height: 65px;
   background: linear-gradient(180deg, #f66 0%, #f33 100%);
@@ -56,5 +61,71 @@ import EnemyFound from "./enemyFound.vue";
   font-weight: 600;
   font-size: 22px;
   color: white;
+}
+
+.next {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  color: rgb(223, 167, 167);
+  border: none;
+  color: black;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 400px) {
+  .cansel-button {
+    width: 360px;
+    height: 65px;
+    background: linear-gradient(180deg, #f66 0%, #f33 100%);
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .cansel-button {
+    width: 340px;
+    height: 60px;
+    background: linear-gradient(180deg, #f66 0%, #f33 100%);
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .cansel-button {
+    width: 320px;
+    height: 60px;
+    background: linear-gradient(180deg, #f66 0%, #f33 100%);
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cansel-button {
+    width: 290px;
+    height: 50px;
+    background: linear-gradient(180deg, #f66 0%, #f33 100%);
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .cansel-button {
+    top: 700px;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  .cansel-button {
+    top: 600px;
+  }
+}
+
+@media screen and (max-height: 630px) {
+  .cansel-button {
+    top: 500px;
+  }
 }
 </style>

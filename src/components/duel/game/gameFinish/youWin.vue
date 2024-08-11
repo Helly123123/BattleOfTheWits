@@ -1,19 +1,30 @@
 <script setup>
 import Header from "./gameFinishHeader.vue";
 import ResultGame from "./resultFight.vue";
+import { ref } from "vue";
+const round = ref(false);
+const roundOn = () => {
+  round.value = true;
+  console.log("sds");
+};
+import YouLose from "./youLose.vue";
 </script>
 
 <template>
-  <Header />
-  <section class="win-cont">
-    <h2 class="win-title">You Win</h2>
-    <ResultGame />
+  <YouLose v-if="round" />
+  <section v-if="!round">
+    <button @click="roundOn" class="nexts">Далее</button>
+    <Header />
+    <section class="win-cont">
+      <h2 class="win-title">You Win</h2>
+      <ResultGame />
+    </section>
+    <div class="button-color-cont"></div>
+    <div class="button-cont">
+      <h1 class="elo-win-title">+15 <span class="elo-title">elo</span></h1>
+      <button class="home-button">HOME</button>
+    </div>
   </section>
-  <div class="button-color-cont"></div>
-  <div class="button-cont">
-    <h1 class="elo-win-title">+15 <span class="elo-title">elo</span></h1>
-    <button class="home-button">HOME</button>
-  </div>
 </template>
 
 <style scoped>
@@ -39,6 +50,19 @@ import ResultGame from "./resultFight.vue";
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.nexts {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  color: rgb(223, 167, 167);
+  border: none;
+  color: black;
+  border-radius: 5px;
+  z-index: 100;
 }
 
 .win-cont {
@@ -100,5 +124,46 @@ import ResultGame from "./resultFight.vue";
   font-size: 22px;
   color: white;
   border: none;
+}
+@media screen and (max-width: 390px) {
+  .home-button {
+    width: 360px;
+    height: 65px;
+    font-size: 22px;
+  }
+
+  .elo-win-title {
+    width: 360px;
+    height: 42px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .home-button {
+    width: 340px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .elo-win-title {
+    width: 340px;
+    height: 42px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .home-button {
+    width: 320px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .elo-win-title {
+    width: 320px;
+    height: 42px;
+    font-size: 28px;
+  }
 }
 </style>

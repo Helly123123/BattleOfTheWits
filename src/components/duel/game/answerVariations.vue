@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <section>
+  <section class="">
     <section class="answer-variations">
       <div class="line-time"></div>
       <section class="answer-variations-card-cont">
@@ -65,6 +65,9 @@
   position: fixed;
   bottom: 0;
   z-index: 30;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,5 +93,80 @@
   height: 12px;
   background: linear-gradient(180deg, #3ccdbe 0%, #1a655e 100%);
   margin-top: 40px;
+}
+
+@media screen and (max-width: 390px) {
+  .answer-variations-card {
+    width: 170px;
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .line-time {
+    width: 340px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .answer-variations-card {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .line-time {
+    width: 320px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .answer-variations-card {
+    width: 130px;
+    height: 100px;
+  }
+
+  .line-time {
+    width: 280px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-height: 890px) {
+  .line-time {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-height: 840px) {
+  .line-time {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (max-height: 780px) {
+  .line-time {
+    margin-top: 160px;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  .line-time {
+    margin-top: 185px;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  .line-time {
+    margin-top: 200px;
+    margin-bottom: -15px;
+  }
+  .answer-variations-card {
+    width: 130px;
+    height: 90px;
+  }
 }
 </style>

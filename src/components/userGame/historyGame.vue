@@ -365,88 +365,86 @@ export default {
 
 @media screen and (max-height: 900px) {
   .user-game-title {
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 10px;
-}
+  }
 }
 
 @media screen and (max-height: 880px) {
   .user-game-title {
-    margin-top: 55px;
+    margin-top: 65px;
     margin-bottom: 10px;
-}
+  }
 
-.card-cont {
-  width: 100%;
-  height: 400px;
-  margin-top: 20px;
-}
-
+  .card-cont {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-height: 870px) {
   .user-game-title {
-    margin-top: 90px;
+    margin-top: 100px;
     margin-bottom: 10px;
-}
+  }
 
-.card-cont {
-  width: 100%;
-  height: 370px;
-  margin-top: 20px;
+  .card-cont {
+    width: 100%;
+    height: 370px;
+    margin-top: 20px;
+  }
 }
-}
-
 
 @media screen and (max-height: 830px) {
   .user-game-title {
-    margin-top: 135px;
+    margin-top: 145px;
     margin-bottom: 10px;
-}
+  }
 
-.card-cont {
-  width: 100%;
-  height: 320px;
-  margin-top: 20px;
-}
+  .card-cont {
+    width: 100%;
+    height: 320px;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-height: 780px) {
   .user-game-title {
-    margin-top: 185px;
+    margin-top: 195px;
     margin-bottom: 10px;
-}
+  }
 
-.card-cont {
-  width: 100%;
-  height: 275px;
-  margin-top: 20px;
-}
+  .card-cont {
+    width: 100%;
+    height: 275px;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-height: 730px) {
   .user-game-title {
-    margin-top: 230px;
+    margin-top: 240px;
     margin-bottom: 10px;
-}
+  }
 
-.card-cont {
-  width: 100%;
-  height: 230px;
-  margin-top: 20px;
-}
+  .card-cont {
+    width: 100%;
+    height: 230px;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-height: 680px) {
   .user-game-title {
-    margin-top: 280px;
+    margin-top: 290px;
     margin-bottom: 10px;
-}
+  }
 
-.card-cont {
-  width: 100%;
-  height: 180px;
-  margin-top: 20px;
-}
+  .card-cont {
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+  }
 }
 </style>

@@ -12,9 +12,17 @@
           </div>
         </div>
         <div class="color-cont">
-          <img src="/main/duel/round/color/green.svg" alt="color" />
-          <img src="/main/duel/round/color/red.svg" alt="color" />
-          <img src="/main/duel/round/color/blue.svg" alt="color" />
+          <img
+            class="color"
+            src="/main/duel/round/color/green.svg"
+            alt="color"
+          />
+          <img class="color" src="/main/duel/round/color/red.svg" alt="color" />
+          <img
+            class="color"
+            src="/main/duel/round/color/blue.svg"
+            alt="color"
+          />
         </div>
       </article>
     </section>
@@ -28,9 +36,9 @@
         <img src="/main/duel/round/enemy.svg" alt="user" />
       </div>
       <div class="color-cont-enemy">
-        <img src="/main/duel/round/color/green.svg" alt="color" />
-        <img src="/main/duel/round/color/green.svg" alt="color" />
-        <img src="/main/duel/round/color/blue.svg" alt="color" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="color" />
+        <img class="color" src="/main/duel/round/color/green.svg" alt="color" />
+        <img class="color" src="/main/duel/round/color/blue.svg" alt="color" />
       </div>
     </article>
   </header>
@@ -95,5 +103,76 @@
   font-size: 20px;
   color: white;
   margin-top: -12px;
+}
+
+@media screen and (max-width: 390px) {
+  .round-header {
+    width: 100%;
+    height: 150px;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .round-header {
+    width: 100%;
+    height: 150px;
+    gap: 30px;
+  }
+  .user-name {
+    font-size: 12px;
+  }
+
+  .oponent-name {
+    font-size: 12px;
+  }
+
+  .user-elo {
+    font-size: 18px;
+    margin-top: -12px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .round-header {
+    width: 100%;
+    height: 150px;
+    gap: 20px;
+  }
+  .user-name {
+    font-size: 10px;
+  }
+
+  .oponent-name {
+    font-size: 10px;
+  }
+
+  .user-elo {
+    font-size: 16px;
+    margin-top: -12px;
+  }
+
+  .color {
+    width: 20px;
+  }
+
+  .color-cont-enemy {
+    margin-left: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .color-cont {
+    margin-left: 0px;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  .answer-variations-card {
+    width: 130px;
+    height: 90px;
+  }
 }
 </style>
