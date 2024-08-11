@@ -4,7 +4,7 @@ const { trueSettings } = inject("settingsStation");
 </script>
 
 <template>
-  <header>
+  <header class="">
     <section class="user-info">
       <section class="user-info-cont">
         <img class="user-icon" src="/header/user/user_icon.svg" alt="user" />
@@ -36,6 +36,10 @@ const { trueSettings } = inject("settingsStation");
   align-items: center;
   gap: 32px;
   margin-bottom: 40px;
+}
+
+header {
+  /* position: fixed; */
 }
 
 .user-info-cont {
@@ -92,18 +96,18 @@ const { trueSettings } = inject("settingsStation");
     height: 60px;
   }
   .statistics-quantity {
-  font-size: 20px;
-  margin-top: -9px;
-}
+    font-size: 20px;
+    margin-top: -9px;
+  }
 
-.statistics-title {
-  font-size: 10px;
-  margin-top: 20px;
-}
+  .statistics-title {
+    font-size: 10px;
+    margin-top: 20px;
+  }
 
-.user-statistics {
-  gap: 15px;
-}
+  .user-statistics {
+    gap: 15px;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -113,21 +117,21 @@ const { trueSettings } = inject("settingsStation");
   }
 
   .user-info {
-  gap: 28px;
-}
+    gap: 28px;
+  }
 
   .statistics-quantity {
-  font-size: 18px;
-  margin-top: -9px;
-}
+    font-size: 18px;
+    margin-top: -9px;
+  }
 
-.statistics-title {
-  font-size: 10px;
-  margin-top: 15px;
-}
+  .statistics-title {
+    font-size: 10px;
+    margin-top: 15px;
+  }
 
-.user-statistics {
-  gap: 15px;
-}
+  .user-statistics {
+    gap: 15px;
+  }
 }
 </style>
