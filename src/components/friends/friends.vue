@@ -307,4 +307,17 @@ const friends = reactive([
     margin-bottom: 10px;
   }
 }
+
+@media screen and (max-height: 680px) {
+  .friends-card-cont {
+    height: 170px;
+  }
+
+  .friends-title {
+    font-size: 32px;
+    text-align: left;
+    margin-top: 290px;
+    margin-bottom: 10px;
+  }
+}
 </style>

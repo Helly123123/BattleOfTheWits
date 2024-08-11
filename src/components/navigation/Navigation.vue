@@ -24,7 +24,7 @@ const friendsButtonClick = () => {
 </script>
 
 <template>
-  <div class="gradient-block"></div>
+  <!-- <div class="gradient-block"></div> -->
   <div class="navigation-color"></div>
   <nav class="navigation" v-if="!settingsStation">
     <button
@@ -110,17 +110,17 @@ const friendsButtonClick = () => {
 
 @media screen and (max-width: 400px) {
   .navigation-btn {
-  width: 180px;
-  height: 40px;
-  font-size: 14px;
-}
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 370px) {
   .navigation-btn {
-  width: 160px;
-  height: 40px;
-  font-size: 14px;
-}
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+  }
 }
 </style>
