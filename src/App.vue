@@ -56,8 +56,8 @@ provide("supportActive", {
   <div class="cont">
     <img class="bg-img" src="/bg.svg" alt="" />
   </div>
-  <Duel />
-  <!-- <section class="main-section" v-if="!settingsStation">
+  <!-- <Duel /> -->
+  <section class="main-section" v-if="!settingsStation">
     <section class="user-accaunt">
       <UserHeader />
       <button class="new-game-btn">
@@ -71,7 +71,7 @@ provide("supportActive", {
     <Friends v-else />
   </section>
   <Settings v-if="settingsStation" />
-  <Navigation /> -->
+  <Navigation />
 </template>
 
 <style scoped>
