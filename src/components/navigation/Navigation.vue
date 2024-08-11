@@ -107,4 +107,20 @@ const friendsButtonClick = () => {
 .navigation-btn.active {
   background: linear-gradient(180deg, #3395ff 0%, #0053ad 100%);
 }
+
+@media screen and (max-width: 400px) {
+  .navigation-btn {
+  width: 180px;
+  height: 40px;
+  font-size: 14px;
+}
+}
+
+@media screen and (max-width: 370px) {
+  .navigation-btn {
+  width: 160px;
+  height: 40px;
+  font-size: 14px;
+}
+}
 </style>

@@ -58,4 +58,22 @@ defineProps({
   font-size: 18px;
   color: rgb(255, 255, 255);
 }
+
+
+@media screen and (max-width: 390px) {
+  .friend-card {
+  width: 360px;
+  height: 56px;
+  gap: 120px;
+}
+}
+
+
+@media screen and (max-width: 360px) {
+  .friend-card {
+  width: 340px;
+  height: 56px;
+  gap: 100px;
+}
+}
 </style>

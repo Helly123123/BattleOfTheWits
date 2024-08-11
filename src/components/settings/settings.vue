@@ -1,11 +1,15 @@
 <script setup>
-import { inject, reactive } from "vue";
+import { inject, reactive, ref } from "vue";
+import Support from './support.vue'
 const { falseSettings } = inject("settingsStation");
+const { supportOn, supportActive } = inject("supportActive");
 
 const settingsButton = reactive({
   settingsActiveLan: false,
   settingsActiveNot: false,
 });
+
+
 
 const settingsButtonLanClick = () => {
   settingsButton.settingsActiveLan = !settingsButton.settingsActiveLan;
@@ -17,15 +21,15 @@ const settingsButtonNotClick = () => {
 </script>
 
 <template>
-  <section class="settings-cont">
-    <article @click="falseSettings" class="settings-title-cont">
-      <img src="/main/settings/left.svg" alt="out" />
-      <h2 class="title-settings">Settings</h2>
-    </article>
+  <section class="settings-cont" v-if="!supportActive">
     <section class="settings-button-cont-block"></section>
     <section class="settings-button-cont">
+      <article @click="falseSettings" class="settings-title-cont">
+        <img src="/main/settings/left.svg" alt="out" />
+        <h2 class="title-settings">Settings</h2>
+      </article>
       <article>
-        <button class="settings-button support">
+        <button @click="supportOn" class="settings-button support">
           Support <img src="/main/settings/right.svg" alt="" />
         </button>
         <button
@@ -61,6 +65,9 @@ const settingsButtonNotClick = () => {
       </article>
     </section>
   </section>
+  <section class="suport" v-if="supportActive">
+    <Support/>
+  </section>
 </template>
 
 <style scoped>
@@ -79,7 +86,7 @@ const settingsButtonNotClick = () => {
   position: fixed;
   bottom: 0;
   z-index: 20;
-  background-color: #040720;
+  background-color: hsl(234, 78%, 7%);
   opacity: 60%;
 }
 
@@ -97,7 +104,7 @@ const settingsButtonNotClick = () => {
 
 .settings-title-cont {
   position: absolute;
-  top: 90px;
+  top: -80px;
   left: 20px;
   z-index: 40;
   display: flex;
@@ -128,6 +135,7 @@ const settingsButtonNotClick = () => {
   align-items: center;
   justify-content: center;
   gap: 0px;
+  margin-top: 8px;
 }
 
 .settings-button.support {
@@ -150,4 +158,92 @@ const settingsButtonNotClick = () => {
 .settings-button.policy {
   gap: 228px;
 }
+
+@media screen and (max-width: 390px) {
+  .settings-button {
+  width: 360px;
+  height: 44px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.settings-button.support {
+  gap: 250px;
+  margin-top: 24px;
+}
+
+.settings-button.language {
+  gap: 200px;
+}
+
+.settings-button.notifications {
+  gap: 180px;
+}
+
+.settings-button.agreement {
+  gap: 185px;
+}
+
+.settings-button.policy {
+  gap: 203px;
+}
+}
+
+@media screen and (max-width: 360px) {
+  .settings-button {
+  width: 340px;
+  height: 44px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.settings-button.support {
+  gap: 230px;
+  margin-top: 24px;
+}
+
+.settings-button.language {
+  gap: 170px;
+}
+
+.settings-button.notifications {
+  gap: 150px;
+}
+
+.settings-button.agreement {
+  gap: 165px;
+}
+
+.settings-button.policy {
+  gap: 180px;
+}
+}
+
+@media screen and (max-width: 340px) {
+  .settings-button {
+  width: 320px;
+  height: 44px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.settings-button.support {
+  gap: 210px;
+  margin-top: 24px;
+}
+
+.settings-button.language {
+  gap: 150px;
+}
+
+.settings-button.notifications {
+  gap: 130px;
+}
+
+.settings-button.agreement {
+  gap: 145px;
+}
+
+.settings-button.policy {
+  gap: 160px;
+}
+}
+
 </style>

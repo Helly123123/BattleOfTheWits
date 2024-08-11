@@ -78,4 +78,56 @@ const { trueSettings } = inject("settingsStation");
   text-align: center;
   gap: 20px;
 }
+
+@media screen and (max-width: 400px) {
+  .user-statistics {
+    width: 240px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .user-statistics {
+    width: 220px;
+    height: 60px;
+  }
+  .statistics-quantity {
+  font-size: 20px;
+  margin-top: -9px;
+}
+
+.statistics-title {
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+.user-statistics {
+  gap: 15px;
+}
+}
+
+@media screen and (max-width: 350px) {
+  .user-statistics {
+    width: 200px;
+    height: 50px;
+  }
+
+  .user-info {
+  gap: 28px;
+}
+
+  .statistics-quantity {
+  font-size: 18px;
+  margin-top: -9px;
+}
+
+.statistics-title {
+  font-size: 10px;
+  margin-top: 15px;
+}
+
+.user-statistics {
+  gap: 15px;
+}
+}
 </style>

@@ -127,4 +127,67 @@ defineProps({
   color: white;
   margin-top: -10px;
 }
+
+@media screen and (max-width: 390px) {
+  .completed-game-card {
+  width: 370px;
+  height: 60px;
+  gap: 60px;
+}
+}
+
+@media screen and (max-width: 370px) {
+  .completed-game-card {
+  width: 350px;
+  height: 60px;
+  gap: 50px;
+}
+
+.defeat-info-cont {
+  gap: 10px;
+}
+
+.win-info {
+  gap: 27px;
+  width: 110px;
+  height: 35px;
+}
+
+
+.defeat-info {
+  gap: 15px;
+  width: 110px;
+  height: 35px;
+}
+}
+
+@media screen and (max-width: 350px) {
+  .completed-game-card {
+  width: 330px;
+  height: 60px;
+  gap: 50px;
+}
+
+.defeat-info-cont {
+  gap: 10px;
+}
+
+.win-info {
+  gap: 27px;
+  width: 100px;
+  height: 35px;
+}
+
+
+.defeat-info {
+  gap: 15px;
+  width: 100px;
+  height: 35px;
+}
+
+.result-bittle {
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+}
+}
 </style>

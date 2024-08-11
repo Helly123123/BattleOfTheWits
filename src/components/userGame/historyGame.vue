@@ -323,4 +323,130 @@ export default {
   flex-direction: column;
   gap: 8px;
 }
+
+@media screen and (max-width: 400px) {
+  .user-game-button {
+    width: 180px;
+    height: 29px;
+    font-size: 14px;
+  }
+
+  .user-game-title {
+    font-size: 32px;
+    width: 370px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .user-game-button {
+    width: 170px;
+    height: 29px;
+    font-size: 14px;
+  }
+
+  .user-game-title {
+    font-size: 30px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .user-game-button {
+    width: 160px;
+    height: 29px;
+    font-size: 14px;
+  }
+
+  .user-game-title {
+    font-size: 28px;
+    width: 330px;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .user-game-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+}
+
+@media screen and (max-height: 880px) {
+  .user-game-title {
+    margin-top: 55px;
+    margin-bottom: 10px;
+}
+
+.card-cont {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
+
+}
+
+@media screen and (max-height: 870px) {
+  .user-game-title {
+    margin-top: 90px;
+    margin-bottom: 10px;
+}
+
+.card-cont {
+  width: 100%;
+  height: 370px;
+  margin-top: 20px;
+}
+}
+
+
+@media screen and (max-height: 830px) {
+  .user-game-title {
+    margin-top: 135px;
+    margin-bottom: 10px;
+}
+
+.card-cont {
+  width: 100%;
+  height: 320px;
+  margin-top: 20px;
+}
+}
+
+@media screen and (max-height: 780px) {
+  .user-game-title {
+    margin-top: 185px;
+    margin-bottom: 10px;
+}
+
+.card-cont {
+  width: 100%;
+  height: 275px;
+  margin-top: 20px;
+}
+}
+
+@media screen and (max-height: 730px) {
+  .user-game-title {
+    margin-top: 230px;
+    margin-bottom: 10px;
+}
+
+.card-cont {
+  width: 100%;
+  height: 230px;
+  margin-top: 20px;
+}
+}
+
+@media screen and (max-height: 680px) {
+  .user-game-title {
+    margin-top: 280px;
+    margin-bottom: 10px;
+}
+
+.card-cont {
+  width: 100%;
+  height: 180px;
+  margin-top: 20px;
+}
+}
 </style>

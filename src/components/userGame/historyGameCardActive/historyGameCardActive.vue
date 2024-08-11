@@ -18,7 +18,9 @@ defineProps({
         <img :src="iconUser" alt="your-icon" />
         <div class="user-info">
           <p class="user-name">You</p>
-          <h2 class="user-elo">{{ eloUser }} <span class="elo-title">elo</span></h2>
+          <h2 class="user-elo">
+            {{ eloUser }} <span class="elo-title">elo</span>
+          </h2>
         </div>
       </div>
       <div class="battle-score">
@@ -29,7 +31,9 @@ defineProps({
       <div class="user-info-cont">
         <div class="user-info">
           <p class="user-name">{{ nameOpponent }}</p>
-          <h2 class="user-elo">{{ eloOpponent }}<span class="elo-title">elo</span></h2>
+          <h2 class="user-elo">
+            {{ eloOpponent }}<span class="elo-title">elo</span>
+          </h2>
         </div>
         <img :src="iconOpponent" alt="your-icon" />
       </div>
@@ -195,5 +199,141 @@ defineProps({
   color: white;
   text-align: center;
   border: none;
+}
+
+@media screen and (max-width: 400px) {
+  .active-game-card {
+    width: 368px;
+    height: 115px;
+  }
+
+  .user-name {
+    font-size: 13px;
+  }
+
+  .user-elo {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  .elo-title {
+    font-size: 10px;
+  }
+
+  .player-statistics-сont {
+    gap: 40px;
+  }
+
+  .turn-title {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+}
+
+.time-title {
+  font-size: 11px;
+  margin-top: -10px;
+}
+
+.fight-station {
+  margin-top: -5px;
+  gap: 130px;
+}
+
+.fight-station-opponent {
+  gap: 80px;
+}
+}
+
+@media screen and (max-width: 370px) {
+  .active-game-card {
+    width: 350px;
+    height: 115px;
+  }
+
+  .user-name {
+    font-size: 12px;
+  }
+
+  .user-elo {
+    font-size: 15px;
+    margin-top: -10px;
+  }
+
+  .elo-title {
+    font-size: 10px;
+  }
+
+  .player-statistics-сont {
+    gap: 35px;
+  }
+
+  .turn-title {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+}
+
+.time-title {
+  font-size: 11px;
+  margin-top: -10px;
+}
+
+.fight-station {
+  margin-top: -5px;
+  gap: 120px;
+}
+
+.fight-station-opponent {
+  gap: 70px;
+}
+}
+
+@media screen and (max-width: 350px) {
+  .active-game-card {
+    width: 330px;
+    height: 115px;
+  }
+
+  .user-name {
+    font-size: 11px;
+  }
+
+  .user-elo {
+    font-size: 14px;
+    margin-top: -10px;
+  }
+
+  .elo-title {
+    font-size: 9px;
+  }
+
+  .player-statistics-сont {
+    gap: 25px;
+  }
+
+  .turn-title {
+  font-size: 13px;
+  color: white;
+}
+
+.time-title {
+  font-size: 11px;
+  margin-top: -10px;
+}
+
+.fight-station {
+  margin-top: -5px;
+  gap: 100px;
+}
+
+.fight-station-opponent {
+  gap: 60px;
+  margin-top: -2px;
+}
+
+
 }
 </style>

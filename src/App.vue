@@ -4,10 +4,12 @@ import HistoryGame from "./components/userGame/historyGame.vue";
 import Navigation from "./components/navigation/Navigation.vue";
 import Friends from "./components/friends/friends.vue";
 import Settings from "./components/settings/settings.vue";
+import Duel from "./components/duel/duel.vue";
 import { ref, inject, provide, reactive } from "vue";
 
 const navigationStation = ref(true);
 const settingsStation = ref(false);
+const supportActive = ref(false);
 
 const falseNavigation = () => {
   navigationStation.value = false;
@@ -23,6 +25,14 @@ const trueSettings = () => {
   settingsStation.value = true;
 };
 
+const supportOn = () => {
+  supportActive.value = true;
+};
+
+const supportOff = () => {
+  supportActive.value = false;
+};
+
 provide("navigationStation", {
   navigationStation,
   trueNavigation,
@@ -34,13 +44,20 @@ provide("settingsStation", {
   falseSettings,
   trueSettings,
 });
+
+provide("supportActive", {
+  supportActive,
+  supportOn,
+  supportOff,
+});
 </script>
 
 <template>
   <div class="cont">
     <img class="bg-img" src="/bg.svg" alt="" />
   </div>
-  <section class="main-section" v-if="!settingsStation">
+  <Duel />
+  <!-- <section class="main-section" v-if="!settingsStation">
     <section class="user-accaunt">
       <UserHeader />
       <button class="new-game-btn">
@@ -54,7 +71,7 @@ provide("settingsStation", {
     <Friends v-else />
   </section>
   <Settings v-if="settingsStation" />
-  <Navigation />
+  <Navigation /> -->
 </template>
 
 <style scoped>
@@ -88,15 +105,18 @@ body {
   top: 140px;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bg-img {
   position: relative;
+  height: 100%;
 }
 
 .new-game-btn {
   border-radius: 80px;
-  padding: 17px 28px;
   width: 388px;
   height: 65px;
   background: linear-gradient(180deg, #3395ff 0%, #0053ad 100%);
@@ -110,5 +130,70 @@ body {
   align-items: center;
   justify-content: center;
   gap: 70px;
+}
+
+@media screen and (max-width: 390px) {
+  .new-game-btn {
+    width: 360px;
+    height: 60px;
+    font-size: 20px;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .user-interface-cont {
+    background-color: #040720;
+    width: 100%;
+    height: 660px;
+  }
+}
+
+@media screen and (max-height: 880px) {
+  .user-interface-cont {
+    background-color: #040720;
+    width: 100%;
+    height: 630px;
+  }
+}
+
+@media screen and (max-height: 870px) {
+  .user-interface-cont {
+    background-color: #040720;
+    width: 100%;
+    height: 600px;
+  }
+}
+
+@media screen and (max-height: 830px) {
+  .user-interface-cont {
+    background-color: #040720;
+    width: 100%;
+    height: 550px;
+  }
+}
+
+@media screen and (max-height: 780px) {
+  .user-interface-cont {
+    background-color: #040720;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  .user-interface-cont {
+    background-color: #040720;
+    width: 100%;
+    height: 450px;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  .user-interface-cont {
+    background-color: #040720;
+    width: 100%;
+    height: 400px;
+  }
 }
 </style>

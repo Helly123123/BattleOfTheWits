@@ -187,4 +187,63 @@ const friends = reactive([
   align-items: center;
   flex-direction: column;
 }
+
+@media screen and (max-width: 390px) {
+  .search-friends {
+  width: 340px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.friends-buttom-cont {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.invite-link-button {
+  width: 175px;
+  height: 43px;
+  font-size: 16px;
+}
+
+.duel-link-button {
+  width: 175px;
+  height: 43px;
+  font-size: 16px;
+}
+.friends-title {
+  width: 370px;
+  font-size: 32px;
+  margin-left: 20px;
+}
+}
+
+@media screen and (max-width: 360px) {
+  .search-friends {
+  width: 315px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.friends-buttom-cont {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.invite-link-button {
+  width: 165px;
+  height: 43px;
+  font-size: 16px;
+}
+
+.duel-link-button {
+  width: 165px;
+  height: 43px;
+  font-size: 16px;
+}
+}
 </style>
