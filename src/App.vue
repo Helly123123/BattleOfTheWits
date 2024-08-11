@@ -101,6 +101,7 @@ provide("testTwo", {
   </div>
   <Duel v-if="duelStation" />
   <section class="main-section" v-if="!settingsStation && !duelStation">
+    <button class="next" @click="duelStationOn">Далее</button>
     <section class="user-accaunt">
       <UserHeader />
       <button @click="duelStationOn" class="new-game-btn">
@@ -131,6 +132,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
+}
+
+.next {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  color: rgb(223, 167, 167);
+  border: none;
+  color: black;
+  border-radius: 5px;
+  z-index: 100;
 }
 
 .user-interface-cont {
