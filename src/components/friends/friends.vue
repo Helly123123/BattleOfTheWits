@@ -190,60 +190,121 @@ const friends = reactive([
 
 @media screen and (max-width: 390px) {
   .search-friends {
-  width: 340px;
-  height: 30px;
-  font-size: 14px;
-}
+    width: 340px;
+    height: 30px;
+    font-size: 14px;
+  }
 
-.friends-buttom-cont {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 12px;
-}
+  .friends-buttom-cont {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
 
-.invite-link-button {
-  width: 175px;
-  height: 43px;
-  font-size: 16px;
-}
+  .invite-link-button {
+    width: 175px;
+    height: 43px;
+    font-size: 16px;
+  }
 
-.duel-link-button {
-  width: 175px;
-  height: 43px;
-  font-size: 16px;
-}
-.friends-title {
-  width: 370px;
-  font-size: 32px;
-  margin-left: 20px;
-}
+  .duel-link-button {
+    width: 175px;
+    height: 43px;
+    font-size: 16px;
+  }
+  .friends-title {
+    width: 370px;
+    font-size: 32px;
+    margin-left: 20px;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .search-friends {
-  width: 315px;
-  height: 30px;
-  font-size: 14px;
+    width: 315px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .friends-buttom-cont {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .invite-link-button {
+    width: 165px;
+    height: 43px;
+    font-size: 16px;
+  }
+
+  .duel-link-button {
+    width: 165px;
+    height: 43px;
+    font-size: 16px;
+  }
 }
 
-.friends-buttom-cont {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 12px;
+@media screen and (max-height: 880px) {
+  .friends-card-cont {
+    height: 360px;
+  }
+
+  .friends-title {
+    font-size: 32px;
+    text-align: left;
+    margin-top: 70px;
+  }
 }
 
-.invite-link-button {
-  width: 165px;
-  height: 43px;
-  font-size: 16px;
+@media screen and (max-height: 870px) {
+  .friends-card-cont {
+    height: 340px;
+  }
+
+  .friends-title {
+    font-size: 32px;
+    text-align: left;
+    margin-top: 90px;
+  }
 }
 
-.duel-link-button {
-  width: 165px;
-  height: 43px;
-  font-size: 16px;
+@media screen and (max-height: 830px) {
+  .friends-card-cont {
+    height: 300px;
+  }
+
+  .friends-title {
+    font-size: 32px;
+    text-align: left;
+    margin-top: 140px;
+  }
 }
+
+@media screen and (max-height: 780px) {
+  .friends-card-cont {
+    height: 250px;
+  }
+
+  .friends-title {
+    font-size: 32px;
+    text-align: left;
+    margin-top: 190px;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  .friends-card-cont {
+    height: 220px;
+  }
+
+  .friends-title {
+    font-size: 32px;
+    text-align: left;
+    margin-top: 240px;
+    margin-bottom: 10px;
+  }
 }
 </style>
