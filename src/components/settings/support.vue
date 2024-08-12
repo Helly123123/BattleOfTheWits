@@ -1,15 +1,18 @@
 <script setup>
 import { inject } from "vue";
 const { supportOff } = inject("supportActive");
+const { SupportSendMessageOn, SupportSendMessage } =
+  inject("SupportSendMessage");
+import SupportSend from "./supportSend.vue";
 </script>
 
 <template>
   <section class="support-cont-block"></section>
   <section class="support-cont">
     <article @click="supportOff" class="support-title-cont">
-        <img src="/main/settings/left.svg" alt="out" />
-        <h2 class="title-support">Support</h2>
-      </article>
+      <img src="/main/settings/left.svg" alt="out" />
+      <h2 class="title-support">Support</h2>
+    </article>
     <h1 class="support-cont-title">
       If you are dissatisfied with something,<br />
       write to us, we will fix the error
@@ -24,9 +27,12 @@ const { supportOff } = inject("supportActive");
         name=""
         id=""
       ></textarea>
-      <button class="send-message-button">Send</button>
+      <button @click="SupportSendMessageOn" class="send-message-button">
+        Send
+      </button>
     </section>
   </section>
+  <SupportSend v-if="SupportSendMessage" />
 </template>
 
 <style scoped>
@@ -124,7 +130,7 @@ const { supportOff } = inject("supportActive");
 }
 
 .support-title-cont {
-    position: absolute;
+  position: absolute;
   top: -80px;
   left: 20px;
   z-index: 40;
@@ -141,115 +147,109 @@ const { supportOff } = inject("supportActive");
 }
 
 @media screen and (max-width: 390px) {
-    .messgage-support-cont {
-  width: 360px;
-  height: 237px;
-}
+  .messgage-support-cont {
+    width: 360px;
+    height: 237px;
+  }
 
-.messgage-support-cont-color {
-  width: 360px;
-  height: 237px;
-  top: 112px;
-}
+  .messgage-support-cont-color {
+    width: 360px;
+    height: 237px;
+    top: 112px;
+  }
 
-.input-support {
-  width: 340px;
-  height: 44px;
-  font-size: 14px;
-}
+  .input-support {
+    width: 340px;
+    height: 44px;
+    font-size: 14px;
+  }
 
+  .textarea-message {
+    width: 340px;
+    height: 100px;
+    font-size: 14px;
+  }
 
-.textarea-message {
-  width: 340px;
-  height: 100px;
-  font-size: 14px;
-}
+  .send-message-button {
+    width: 360px;
+    height: 50px;
+    font-size: 22px;
+  }
 
-.send-message-button {
-  width: 360px;
-  height: 50px;
-  font-size: 22px;
-}
-
-.support-cont-title {
-  font-size: 20px;
-  width: 360px;
-}
-
+  .support-cont-title {
+    font-size: 20px;
+    width: 360px;
+  }
 }
 
 @media screen and (max-width: 360px) {
-    .messgage-support-cont {
-  width: 340px;
-  height: 237px;
-}
+  .messgage-support-cont {
+    width: 340px;
+    height: 237px;
+  }
 
-.messgage-support-cont-color {
-  width: 340px;
-  height: 237px;
-  top: 102px;
-}
+  .messgage-support-cont-color {
+    width: 340px;
+    height: 237px;
+    top: 102px;
+  }
 
-.input-support {
-  width: 320px;
-  height: 44px;
-  font-size: 14px;
-}
+  .input-support {
+    width: 320px;
+    height: 44px;
+    font-size: 14px;
+  }
 
+  .textarea-message {
+    width: 320px;
+    height: 100px;
+    font-size: 14px;
+  }
 
-.textarea-message {
-  width: 320px;
-  height: 100px;
-  font-size: 14px;
-}
+  .send-message-button {
+    width: 340px;
+    height: 50px;
+    font-size: 22px;
+  }
 
-.send-message-button {
-  width: 340px;
-  height: 50px;
-  font-size: 22px;
-}
-
-.support-cont-title {
-  font-size: 18px;
-  width: 340px;
-}
-
+  .support-cont-title {
+    font-size: 18px;
+    width: 340px;
+  }
 }
 
 @media screen and (max-width: 340px) {
-    .messgage-support-cont {
-  width: 320px;
-  height: 237px;
-}
+  .messgage-support-cont {
+    width: 320px;
+    height: 237px;
+  }
 
-.messgage-support-cont-color {
-  width: 320px;
-  height: 237px;
-  top: 96px;
-}
+  .messgage-support-cont-color {
+    width: 320px;
+    height: 237px;
+    top: 96px;
+  }
 
-.input-support {
-  width: 300px;
-  height: 44px;
-  font-size: 14px;
-}
+  .input-support {
+    width: 300px;
+    height: 44px;
+    font-size: 14px;
+  }
 
+  .textarea-message {
+    width: 300px;
+    height: 100px;
+    font-size: 14px;
+  }
 
-.textarea-message {
-  width: 300px;
-  height: 100px;
-  font-size: 14px;
-}
-
-.send-message-button {
-  width: 320px;
-  height: 50px;
-  font-size: 22px;
-}
-.support-cont-title {
-  font-size: 16px;
-  width: 320px;
-}
-
+  .send-message-button {
+    width: 320px;
+    height: 50px;
+    font-size: 22px;
+  }
+  .support-cont-title {
+    font-size: 16px;
+    width: 320px;
+  }
 }
 </style>

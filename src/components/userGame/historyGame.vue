@@ -271,13 +271,14 @@ export default {
   z-index: 30;
   bottom: 0;
   width: 100%;
-  height: 673px;
+  height: 628px;
 }
 
 .user-game-title-cont {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -50px;
 }
 
 .user-game-title {

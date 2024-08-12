@@ -2,22 +2,12 @@
 import Header from "./headerInfo.vue";
 import Question from "./question.vue";
 import answerVariations from "./answerVariations.vue";
-import CorrectAnswer from "../game/correctAnswer.vue";
-import { inject, ref } from "vue";
-const { ViborOn } = inject("testTwo");
-
-const round = ref(false);
-const roundOn = () => {
-  round.value = true;
-};
 </script>
 
 <template>
-  <CorrectAnswer v-if="round" />
-  <section v-if="!round">
+  <section>
     <Header />
     <Question />
-    <button class="next" @click="roundOn">Далее</button>
     <div class="answer-variations-cont"></div>
     <section class="answer-variations">
       <answerVariations />

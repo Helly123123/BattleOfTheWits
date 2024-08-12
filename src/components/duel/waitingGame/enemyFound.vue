@@ -1,17 +1,11 @@
 <script setup>
 import { inject, ref } from "vue";
-const { EnemySyOn } = inject("test");
-import Round from "../game/round.vue";
-const round = ref(false);
-const roundOn = () => {
-  round.value = true;
-};
+const { selectThemesStationOn } = inject("selectThemesStation");
 </script>
 
 <template>
-  <Round v-if="round" />
-  <section v-if="!round">
-    <button class="next" @click="roundOn">Далее</button>
+  <section>
+    <button class="next" @click="selectThemesStationOn">Далее</button>
     <img class="light-img" src="/main/duel/enemyFound/light.svg" alt="" />
     <article class="enemy-block">
       <img

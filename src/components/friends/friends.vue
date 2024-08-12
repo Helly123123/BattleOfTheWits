@@ -1,6 +1,6 @@
 <script setup>
 import FriendCard from "./friendsCard/friendsCardList.vue";
-import { reactive } from "vue";
+import { reactive, inject } from "vue";
 
 const friends = reactive([
   {

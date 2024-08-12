@@ -1,4 +1,7 @@
 <script setup>
+import { reactive, inject } from "vue";
+
+const { UserProfileStationOn } = inject("UserProfileStation");
 defineProps({
   icon: String,
   name: String,
@@ -7,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <article class="friend-card">
+  <article @click="UserProfileStationOn" class="friend-card">
     <div class="image-name-friends-cont">
       <img :src="icon" alt="friend" />
       <h2 class="friend-name">{{ name }}</h2>
@@ -59,21 +62,19 @@ defineProps({
   color: rgb(255, 255, 255);
 }
 
-
 @media screen and (max-width: 390px) {
   .friend-card {
-  width: 360px;
-  height: 56px;
-  gap: 120px;
+    width: 360px;
+    height: 56px;
+    gap: 120px;
+  }
 }
-}
-
 
 @media screen and (max-width: 360px) {
   .friend-card {
-  width: 340px;
-  height: 56px;
-  gap: 100px;
-}
+    width: 340px;
+    height: 56px;
+    gap: 100px;
+  }
 }
 </style>

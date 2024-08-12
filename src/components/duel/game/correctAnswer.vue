@@ -2,19 +2,11 @@
 import Header from "./headerInfo.vue";
 import Question from "./question.vue";
 import { inject, ref } from "vue";
-import WrongAnswer from "../game/wrongAnswer.vue";
-import YouWin from "../game/gameFinish/youWin.vue";
-const round = ref(false);
-const roundOn = () => {
-  round.value = true;
-  console.log("sds");
-};
+const { wrongAnswerOn } = inject("wrongAnswer");
 </script>
 
 <template>
-  <YouWin v-if="round" />
-  <section v-if="!round">
-    <button @click="roundOn" class="next">Далее</button>
+  <section>
     <Header />
     <Question />
     <div class="answer-variations-cont"></div>
@@ -22,13 +14,13 @@ const roundOn = () => {
       <section class="answer-variations">
         <section class="answer-variations-card-cont">
           <article class="answer-variations-card">
-            <h1 class="answer-title">42</h1>
+            <h1 class="answer-title">46</h1>
           </article>
           <article class="answer-variations-card-good">
-            <h1 class="answer-title">42</h1>
+            <h1 class="answer-title">47</h1>
           </article>
           <article class="answer-variations-card">
-            <h1 class="answer-title">42</h1>
+            <h1 class="answer-title">23</h1>
             <img
               class="enemy-img"
               src="/main/duel/correctAnswer/enemy.svg"
@@ -36,10 +28,10 @@ const roundOn = () => {
             />
           </article>
           <article class="answer-variations-card">
-            <h1 class="answer-title">42</h1>
+            <h1 class="answer-title">0</h1>
           </article>
         </section>
-        <button class="next-button">
+        <button @click="wrongAnswerOn" class="next-button">
           NEXT <img src="/main/duel/correctAnswer/NEXT.svg" alt="next" />
         </button>
       </section>

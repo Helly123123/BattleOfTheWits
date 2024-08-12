@@ -14,7 +14,6 @@ const roundOn = () => {
   <section v-if="!round">
     <Header />
     <Question />
-    <button @click="roundOn" class="next">Далее</button>
     <div class="answer-variations-cont"></div>
     <section>
       <section class="answer-variations">

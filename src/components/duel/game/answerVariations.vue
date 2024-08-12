@@ -1,21 +1,24 @@
-<script></script>
+<script setup>
+import { inject } from "vue";
+const { correctAnswerOn } = inject("correctAnswer");
+</script>
 
 <template>
   <section class="">
     <section class="answer-variations">
       <div class="line-time"></div>
       <section class="answer-variations-card-cont">
-        <article class="answer-variations-card">
-          <h1 class="answer-title">42</h1>
+        <article @click="correctAnswerOn" class="answer-variations-card">
+          <h1 class="answer-title">46</h1>
         </article>
-        <article class="answer-variations-card">
-          <h1 class="answer-title">42</h1>
+        <article @click="correctAnswerOn" class="answer-variations-card">
+          <h1 class="answer-title">47</h1>
         </article>
-        <article class="answer-variations-card">
-          <h1 class="answer-title">42</h1>
+        <article @click="correctAnswerOn" class="answer-variations-card">
+          <h1 class="answer-title">23</h1>
         </article>
-        <article class="answer-variations-card">
-          <h1 class="answer-title">42</h1>
+        <article @click="correctAnswerOn" class="answer-variations-card">
+          <h1 class="answer-title">0</h1>
         </article>
       </section>
     </section>

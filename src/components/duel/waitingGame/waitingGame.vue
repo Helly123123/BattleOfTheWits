@@ -1,26 +1,22 @@
 <script setup>
 import UserIcon from "./userIconWaiting.vue";
 import EnemyFound from "./enemyFound.vue";
-import { ref } from "vue";
-const EnemyFoundSt = ref(false);
-const EnemyFoundOn = () => {
-  EnemyFoundSt.value = true;
-};
+import { inject } from "vue";
+const { enemyFoundStation, enemyFoundStationOn } = inject("enemyFoundStation");
 </script>
 
 <template>
-  <section v-if="!EnemyFoundSt">
+  <section>
     <article class="game-timer-cont">
       <p class="subtitle-timer">waiting game...</p>
       <h2 class="timer">15</h2>
     </article>
     <UserIcon />
     <article>
-      <button class="cansel-button">CANCEL</button>
+      <button class="cansel-button" @click="duelStationOff">CANCEL</button>
     </article>
-    <button class="next" @click="EnemyFoundOn">Далее</button>
+    <button class="next" @click="enemyFoundStationOn">Далее</button>
   </section>
-  <EnemyFound v-if="EnemyFoundSt" />
 </template>
 
 <style scoped>

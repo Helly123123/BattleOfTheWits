@@ -1,36 +1,66 @@
+<script setup>
+import { inject } from "vue";
+const { roundStationOn } = inject("roundStation");
+</script>
+
 <script>
 export default {
   data() {
     return {
-      themeStatiom: {
-        black: true,
-        trec: true,
-        fuc: true,
-        chet: 0,
-      },
-      styletest: {
-        opacity: "100px",
-      },
+      cards: [
+        {
+          selected: false,
+          name: "Science",
+          img: "/main/selectThemes/Science.svg",
+        },
+        {
+          selected: false,
+          name: "In a healthy body",
+          img: "/main/selectThemes/In_a_healthy_body.svg",
+        },
+        {
+          selected: false,
+          name: "In the world of cinema",
+          img: "/main/selectThemes/In_the_world_of_cinema.svg",
+        },
+        {
+          selected: false,
+          name: "Games and video games",
+          img: "/main/selectThemes/Games_and_video_games.svg",
+        },
+        {
+          selected: false,
+          name: "History",
+          img: "/main/selectThemes/history.svg",
+        },
+        { selected: false, name: "Music", img: "/main/selectThemes/Music.svg" },
+        {
+          selected: false,
+          name: "Geography",
+          img: "/main/selectThemes/Geography.svg",
+        },
+        {
+          selected: false,
+          name: "TV series",
+          img: "/main/selectThemes/TV_series.svg",
+        },
+      ],
     };
   },
+  computed: {
+    disableUnselectedCards() {
+      return this.cards.filter((card) => card.selected).length === 2;
+    },
+    showButton() {
+      return this.cards.filter((card) => card.selected).length === 2;
+    },
+  },
   methods: {
-    clock() {
-      if (this.themeStatiom.chet != 2) {
-        this.themeStatiom.chet++;
-        this.themeStatiom.black = false;
+    selectCard(index) {
+      if (!this.cards[index].selected && this.disableUnselectedCards) {
+        return;
       }
-    },
-    clockT() {
-      if (this.themeStatiom.chet != 2) {
-        this.themeStatiom.chet++;
-        this.themeStatiom.fuc = false;
-      }
-    },
-    clockH() {
-      if (this.themeStatiom.chet != 2) {
-        this.themeStatiom.chet++;
-        this.themeStatiom.trec = false;
-      }
+      this.cards[index].selected = !this.cards[index].selected;
     },
   },
 };
@@ -43,81 +73,26 @@ export default {
       for the questions
     </h2>
     <section class="there-card-cont">
-      <article
-        @click="clock"
-        class="theme-card"
-        :class="{
-          opacity: themeStatiom.chet === 2,
-        }"
+      <div
+        v-for="(card, index) in cards"
+        :key="index"
+        :class="[
+          'card',
+          { selected: card.selected, disabled: disableUnselectedCards },
+        ]"
+        @click="selectCard(index)"
       >
-        <div v-if="themeStatiom.black" class="theme-card-color"></div>
-        <img src="/main/selectThemes/Science.svg" alt="" />
-        <h2 class="theme-card-title">Science</h2>
-      </article>
-      <article
-        @click="clockT"
-        class="theme-card"
-        :class="{ opacity: themeStatiom.chet === 2 }"
-      >
-        <div v-if="themeStatiom.fuc" class="theme-card-color"></div>
-        <img src="/main/selectThemes/In_a_healthy_body.svg" alt="" />
-        <h2 class="theme-card-title">In a healthy body</h2>
-      </article>
-      <article
-        @click="clockH"
-        class="theme-card"
-        :class="{ opacity: themeStatiom.chet === 2 }"
-      >
-        <div v-if="themeStatiom.trec" class="theme-card-color"></div>
-        <img src="/main/selectThemes/In_the_world_of_cinema.svg" alt="" />
-        <h2 class="theme-card-title">In the world of cinema</h2>
-      </article>
-      <article
-        @click="clock"
-        class="theme-card"
-        :class="{ opacity: themeStatiom.chet === 2 }"
-      >
-        <div class="theme-card-color"></div>
-        <img src="/main/selectThemes/Games_and_video_games.svg" alt="" />
-        <h2 class="theme-card-title">Games and video games</h2>
-      </article>
-      <article
-        @click="clock"
-        class="theme-card"
-        :class="{ opacity: themeStatiom.chet === 2 }"
-      >
-        <div class="theme-card-color"></div>
-        <img src="/main/selectThemes/history.svg" alt="" />
-        <h2 class="theme-card-title">History</h2>
-      </article>
-      <article
-        @click="clock"
-        class="theme-card"
-        :class="{ opacity: themeStatiom.chet === 2 }"
-      >
-        <div class="theme-card-color"></div>
-        <img src="/main/selectThemes/Music.svg" alt="" />
-        <h2 class="theme-card-title">Music</h2>
-      </article>
-      <article
-        @click="clock"
-        class="theme-card"
-        :class="{ opacity: themeStatiom.chet === 2 }"
-      >
-        <div class="theme-card-color"></div>
-        <img src="/main/selectThemes/Geography.svg" alt="" />
-        <h2 class="theme-card-title">Geography</h2>
-      </article>
-      <article
-        @click="clock"
-        class="theme-card"
-        :class="{ opacity: themeStatiom.chet === 2 }"
-      >
-        <div class="theme-card-color"></div>
-        <img src="/main/selectThemes/TV_series.svg" alt="" />
-        <h2 class="theme-card-title">TV series</h2>
-      </article>
+        <img class="card-img" :src="card.img" alt="" />
+        <h1 class="card-name">{{ card.name }}</h1>
+      </div>
     </section>
+    <button
+      :class="['next-button', { active: showButton }]"
+      :disabled="!showButton"
+      @click="showButton ? roundStationOn() : null"
+    >
+      NEXT <img src="/main/settings/right.svg" alt="" />
+    </button>
   </section>
 </template>
 
@@ -141,8 +116,48 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
+.card-container {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+}
 
-.theme-card-title {
+.next-button {
+  position: fixed;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 80px;
+  width: 388px;
+  height: 65px;
+  background: linear-gradient(180deg, #b266ff 0%, #5900b2 100%);
+  border: none;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 260px;
+  opacity: 60%;
+  cursor: not-allowed;
+}
+
+.next-button.active {
+  opacity: 100%;
+}
+
+.card-img {
+  position: absolute;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+}
+
+.card-name {
   position: absolute;
   top: 70px;
   font-family: "Inter Tight", sans-serif;
@@ -152,21 +167,13 @@ export default {
   color: white;
 }
 
-.theme-card img {
-  position: absolute;
-  top: 15px;
-  width: 60px;
-  height: 60px;
-}
-
-.theme-card {
+.card {
   border: 1px solid #040720;
   border-radius: 27px;
   width: 190px;
   height: 117px;
   box-shadow: 0 4px 0 0 #040720;
-  background: linear-gradient(180deg, #3395ff 0%, #0053ad 100%),
-    rgba(4, 7, 32, 0.6);
+  background: linear-gradient(180deg, #2c3580 0%, #153659 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,12 +182,15 @@ export default {
   opacity: 100%;
 }
 
-.theme-card.opacity {
-  opacity: 60%;
+.card.selected {
+  box-shadow: 0 4px 0 0 #040720;
+  background: linear-gradient(180deg, #3395ff 0%, #0053ad 100%),
+    rgba(4, 7, 32, 0.6);
 }
 
-.theme-card.active {
-  opacity: 100%;
+.card.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .theme-card-color {

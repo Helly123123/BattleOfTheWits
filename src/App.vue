@@ -5,13 +5,98 @@ import Navigation from "./components/navigation/Navigation.vue";
 import Friends from "./components/friends/friends.vue";
 import Settings from "./components/settings/settings.vue";
 import Duel from "./components/duel/duel.vue";
+import UserProfile from "./components/userProfile/userProfile.vue";
 import { ref, inject, provide, reactive } from "vue";
 
 const navigationStation = ref(true);
 const settingsStation = ref(false);
 const supportActive = ref(false);
 const duelStation = ref(false);
-const EnemySy = ref(false);
+const answerVariantStation = ref(false);
+const enemyFoundStation = ref(false);
+const SearchOponent = ref(true);
+const selectThemesStation = ref(false);
+const roundStation = ref(false);
+const correctAnswer = ref(false);
+const wrongAnswer = ref(false);
+const SupportSendMessage = ref(false);
+const UserProfileStation = ref(false);
+
+const UserProfileStationOn = () => {
+  UserProfileStation.value = true;
+};
+
+const SearchOponentOn = () => {
+  SearchOponent.value = false;
+};
+
+const UserProfileStationOff = () => {
+  UserProfileStation.value = false;
+};
+
+const SupportSendMessageOn = () => {
+  SupportSendMessage.value = true;
+};
+
+const SupportSendMessageOff = () => {
+  SupportSendMessage.value = false;
+};
+
+const wrongAnswerOn = () => {
+  wrongAnswer.value = true;
+  correctAnswerOff();
+};
+
+const wrongAnswerOff = () => {
+  wrongAnswer.value = false;
+};
+
+const correctAnswerOn = () => {
+  correctAnswer.value = true;
+  roundStationOff();
+};
+
+const correctAnswerOff = () => {
+  correctAnswer.value = false;
+};
+
+const roundStationOn = () => {
+  roundStation.value = true;
+  selectThemesStationOff();
+};
+const roundStationOff = () => {
+  roundStation.value = false;
+};
+
+const selectThemesStationOn = () => {
+  selectThemesStation.value = true;
+  enemyFoundStationOff();
+};
+const selectThemesStationOff = () => {
+  selectThemesStation.value = false;
+};
+
+const answerVariantStationOn = () => {
+  answerVariantStation.value = true;
+};
+const answerVariantStationOff = () => {
+  answerVariantStation.value = false;
+};
+
+const enemyFoundStationOn = () => {
+  enemyFoundStation.value = true;
+  SearchOponentOff();
+};
+const enemyFoundStationOff = () => {
+  SearchOponent.value = false;
+  enemyFoundStation.value = false;
+};
+
+const SearchOponentOff = () => {
+  SearchOponent.value = false;
+  console.log("sds");
+};
+
 const Vibor = ref(false);
 const VibotTwo = ref(false);
 
@@ -22,11 +107,6 @@ const VibotTwoOn = () => {
 const ViborOn = () => {
   Vibor.value = true;
   console.log("Vibor");
-};
-
-const EnemySyOn = () => {
-  EnemySy.value = true;
-  console.log("sds");
 };
 
 const duelStationOn = () => {
@@ -82,16 +162,58 @@ provide("duelStation", {
   duelStationOff,
 });
 
-provide("test", {
-  EnemySy,
-  EnemySyOn,
+provide("SearchOponent", {
+  SearchOponent,
+  SearchOponentOn,
+  SearchOponentOff,
 });
 
-provide("testTwo", {
-  Vibor,
-  ViborOn,
-  VibotTwo,
-  VibotTwoOn,
+provide("answerVariantStation", {
+  answerVariantStation,
+  answerVariantStationOn,
+  answerVariantStationOff,
+});
+
+provide("enemyFoundStation", {
+  enemyFoundStation,
+  enemyFoundStationOn,
+  enemyFoundStationOff,
+});
+
+provide("selectThemesStation", {
+  selectThemesStation,
+  selectThemesStationOn,
+  selectThemesStationOff,
+});
+
+provide("roundStation", {
+  roundStation,
+  roundStationOn,
+  roundStationOff,
+});
+
+provide("correctAnswer", {
+  correctAnswer,
+  correctAnswerOn,
+  correctAnswerOff,
+});
+
+provide("wrongAnswer", {
+  wrongAnswer,
+  wrongAnswerOn,
+  wrongAnswerOff,
+});
+
+provide("SupportSendMessage", {
+  SupportSendMessage,
+  SupportSendMessageOn,
+  SupportSendMessageOff,
+});
+
+provide("UserProfileStation", {
+  UserProfileStation,
+  UserProfileStationOn,
+  UserProfileStationOff,
 });
 </script>
 
@@ -100,8 +222,10 @@ provide("testTwo", {
     <img class="bg-img" src="/bg.svg" alt="" />
   </div>
   <Duel v-if="duelStation" />
-  <section class="main-section" v-if="!settingsStation && !duelStation">
-    <button class="next" @click="duelStationOn">Далее</button>
+  <section
+    class="main-section"
+    v-if="!settingsStation && !duelStation && !UserProfileStation"
+  >
     <section class="user-accaunt">
       <UserHeader />
       <button @click="duelStationOn" class="new-game-btn">
@@ -116,6 +240,7 @@ provide("testTwo", {
   </section>
   <Settings v-if="settingsStation" />
   <Navigation v-if="!duelStation" />
+  <UserProfile v-if="UserProfileStation" />
 </template>
 
 <style scoped>
@@ -132,19 +257,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-}
-
-.next {
-  position: fixed;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  color: rgb(223, 167, 167);
-  border: none;
-  color: black;
-  border-radius: 5px;
-  z-index: 100;
 }
 
 .user-interface-cont {
@@ -166,13 +278,14 @@ body {
 }
 
 .user-accaunt {
-  position: absolute;
+  position: fixed;
   top: 140px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   flex-direction: column;
+  z-index: 100;
 }
 
 .bg-img {
