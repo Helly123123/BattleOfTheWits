@@ -116,6 +116,7 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
+
 .card-container {
   display: flex;
   gap: 10px;
@@ -159,12 +160,14 @@ export default {
 
 .card-name {
   position: absolute;
-  top: 70px;
+  top: 80px;
   font-family: "Inter Tight", sans-serif;
   font-weight: 600;
   font-size: 14px;
   text-align: center;
   color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card {
@@ -200,5 +203,126 @@ export default {
   height: 117px;
   opacity: 60%;
   background-color: #040720;
+}
+
+@media screen and (max-width: 400px) {
+  .theme-title {
+    font-size: 30px;
+  }
+
+  .card {
+    width: 170px;
+    height: 117px;
+  }
+
+  .next-button {
+    top: 125%;
+    width: 360px;
+    height: 65px;
+    font-size: 22px;
+    gap: 240px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card {
+    width: 150px;
+    height: 117px;
+  }
+
+  .theme-title {
+    font-size: 28px;
+  }
+
+  .card-name {
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+  }
+
+  .next-button {
+    top: 125%;
+    width: 330px;
+    height: 65px;
+    font-size: 22px;
+    gap: 220px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card-img {
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    height: 60px;
+  }
+
+  .card {
+    width: 130px;
+    height: 90px;
+  }
+
+  .card-name {
+    top: 60px;
+    font-size: 10px;
+  }
+
+  .theme-title {
+    font-size: 24px;
+  }
+
+  .next-button {
+    top: 125%;
+    width: 300px;
+    height: 65px;
+    font-size: 22px;
+    gap: 200px;
+  }
+}
+
+@media screen and (max-height: 870px) {
+  .next-button {
+    top: 110%;
+  }
+}
+
+@media screen and (max-height: 770px) {
+  .theme-title {
+    font-size: 22px;
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .theme-title {
+    font-size: 22px;
+    margin-top: -120px;
+  }
+
+  .next-button {
+    top: 115%;
+  }
+
+  .card {
+    width: 130px;
+    height: 90px;
+  }
+
+  .theme-title {
+    font-size: 24px;
+  }
+
+  .card-img {
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    height: 60px;
+  }
+
+  .card-name {
+    top: 60px;
+    font-size: 10px;
+  }
 }
 </style>
