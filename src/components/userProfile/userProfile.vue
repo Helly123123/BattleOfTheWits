@@ -111,7 +111,7 @@ const completed = reactive([
 <style scoped>
 .user-profile-cont {
   position: fixed;
-  top: 50%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -160,7 +160,7 @@ const completed = reactive([
   width: 100%;
   height: 250px;
   overflow-x: hidden;
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
