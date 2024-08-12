@@ -25,14 +25,15 @@ const { youLoseStation } = inject("youLoseStation");
 </script>
 
 <template>
-  <WaitingGame v-if="SearchOponent" />
+  <!-- <WaitingGame v-if="SearchOponent" />
   <EnemyFound v-if="!SearchOponent && enemyFoundStation" />
   <SelectThemes v-if="selectThemesStation" />
   <Round v-if="roundStation" />
   <CorrectAnswer v-if="correctAnswer" />
-  <WrongAnswer v-if="wrongAnswer" />
-  <YouWin v-if="youWinStation" />
-  <YouLose v-if="youLoseStation" />
+  <WrongAnswer v-if="wrongAnswer" /> -->
+  <!-- <YouWin v-if="youWinStation" /> -->
+  <!-- <YouLose v-if="youLoseStation" /> -->\
+  <YouWin />
   <!-- <Ready /> -->
 </template>
 

@@ -182,4 +182,106 @@
     font-size: 10px;
   }
 }
+
+@media screen and (max-height: 860px) {
+  .theme {
+    width: 90px;
+    height: 90px;
+  }
+
+  .theme-title-game {
+    font-size: 10px;
+  }
+
+  .theme-icon {
+    width: 30px;
+  }
+}
+
+@media screen and (max-height: 860px) {
+  .theme {
+    width: 90px;
+    height: 90px;
+  }
+
+  .theme-title-game {
+    font-size: 10px;
+  }
+
+  .theme-icon {
+    width: 30px;
+  }
+}
+
+@media screen and (max-height: 840px) {
+  .theme {
+    width: 80px;
+    height: 80px;
+  }
+
+  .theme-title-game {
+    font-size: 10px;
+  }
+
+  .theme-icon {
+    width: 25px;
+  }
+}
+
+@media screen and (max-height: 840px) {
+  .theme {
+    width: 80px;
+    height: 80px;
+  }
+
+  .theme-title-game {
+    font-size: 10px;
+  }
+
+  .theme-icon {
+    width: 25px;
+  }
+
+  .color {
+    width: 23px;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  .theme {
+    width: 70px;
+    height: 70px;
+  }
+
+  .theme-title-game {
+    font-size: 10px;
+  }
+
+  .theme-icon {
+    width: 20px;
+  }
+
+  .color {
+    width: 20px;
+  }
+}
+
+@media screen and (max-height: 680px) {
+  .theme {
+    width: 65px;
+    height: 65px;
+  }
+
+  .theme-title-game {
+    font-size: 7px;
+  }
+
+  .theme-icon {
+    width: 20px;
+  }
+
+  .color {
+    width: 20px;
+  }
+}
 </style>

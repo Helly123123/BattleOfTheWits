@@ -7,8 +7,7 @@ const { duelStationOff } = inject("duelStation");
 </script>
 
 <template>
-  <YouLose v-if="round" />
-  <section v-if="!round">
+  <section>
     <button @click="youLoseStationOn" class="nexts">Далее</button>
     <Header />
     <section class="win-cont">
@@ -160,6 +159,194 @@ const { duelStationOff } = inject("duelStation");
     width: 320px;
     height: 42px;
     font-size: 28px;
+  }
+}
+
+@media screen and (max-height: 820px) {
+  .button-color-cont {
+    width: 100%;
+    height: 150px;
+  }
+
+  .button-cont {
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    height: 150px;
+  }
+
+  .elo-win-title {
+    width: 388px;
+    height: 35px;
+    font-size: 25px;
+  }
+
+  .elo-title {
+    font-size: 14px;
+    margin-top: -10px;
+  }
+
+  .home-button {
+    width: 388px;
+    height: 55px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-height: 780px) {
+  .button-color-cont {
+    width: 100%;
+    height: 150px;
+  }
+
+  .button-cont {
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    height: 150px;
+  }
+
+  .elo-win-title {
+    width: 388px;
+    height: 35px;
+    font-size: 25px;
+  }
+
+  .elo-title {
+    font-size: 14px;
+    margin-top: -10px;
+  }
+
+  .home-button {
+    width: 388px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .win-cont {
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-height: 710px) {
+  .button-color-cont {
+    width: 100%;
+    height: 130px;
+  }
+
+  .button-cont {
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    height: 150px;
+  }
+
+  .elo-win-title {
+    width: 388px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .elo-title {
+    font-size: 12px;
+    margin-top: -10px;
+  }
+
+  .home-button {
+    width: 388px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .win-cont {
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-height: 690px) {
+  .button-color-cont {
+    width: 100%;
+    height: 120px;
+  }
+
+  .button-cont {
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    height: 150px;
+  }
+
+  .elo-win-title {
+    width: 388px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .elo-title {
+    font-size: 12px;
+    margin-top: -10px;
+  }
+
+  .home-button {
+    width: 388px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .win-cont {
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-height: 670px) {
+  .button-color-cont {
+    width: 100%;
+    height: 120px;
+  }
+
+  .button-cont {
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    height: 150px;
+  }
+
+  .elo-win-title {
+    width: 388px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .elo-title {
+    font-size: 12px;
+    margin-top: -10px;
+  }
+
+  .home-button {
+    width: 388px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .win-cont {
+    position: fixed;
+    top: 270px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>
