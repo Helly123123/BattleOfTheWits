@@ -210,24 +210,24 @@ const settingsButtonNotClick = () => {
     margin-top: 8px;
   }
   .settings-button.support {
-    gap: 230px;
+    gap: 200px;
     margin-top: 24px;
   }
 
   .settings-button.language {
-    gap: 170px;
-  }
-
-  .settings-button.notifications {
     gap: 150px;
   }
 
+  .settings-button.notifications {
+    gap: 135px;
+  }
+
   .settings-button.agreement {
-    gap: 165px;
+    gap: 135px;
   }
 
   .settings-button.policy {
-    gap: 180px;
+    gap: 150px;
   }
 }
 
@@ -239,24 +239,24 @@ const settingsButtonNotClick = () => {
     margin-top: 8px;
   }
   .settings-button.support {
-    gap: 210px;
+    gap: 190px;
     margin-top: 24px;
   }
 
   .settings-button.language {
-    gap: 150px;
+    gap: 140px;
   }
 
   .settings-button.notifications {
-    gap: 130px;
+    gap: 120px;
   }
 
   .settings-button.agreement {
-    gap: 145px;
+    gap: 130px;
   }
 
   .settings-button.policy {
-    gap: 160px;
+    gap: 145px;
   }
 }
 </style>
