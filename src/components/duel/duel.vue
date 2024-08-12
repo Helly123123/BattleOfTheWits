@@ -23,15 +23,15 @@ const { wrongAnswer } = inject("wrongAnswer");
 </script>
 
 <template>
-  <!-- <WaitingGame v-if="SearchOponent" />
+  <WaitingGame v-if="SearchOponent" />
   <EnemyFound v-if="!SearchOponent && enemyFoundStation" />
   <SelectThemes v-if="selectThemesStation" />
   <Round v-if="roundStation" />
   <CorrectAnswer v-if="correctAnswer" />
-  <WrongAnswer v-if="wrongAnswer" /> -->
+  <WrongAnswer v-if="wrongAnswer" />
   <!-- <YouWin /> -->
   <!-- <YouLose /> -->
-  <Ready />
+  <!-- <Ready /> -->
 </template>
 
 <style scoped></style>
