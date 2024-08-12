@@ -225,25 +225,25 @@ defineProps({
   }
 
   .turn-title {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: white;
-}
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+  }
 
-.time-title {
-  font-size: 11px;
-  margin-top: -10px;
-}
+  .time-title {
+    font-size: 11px;
+    margin-top: -10px;
+  }
 
-.fight-station {
-  margin-top: -5px;
-  gap: 130px;
-}
+  .fight-station {
+    margin-top: -5px;
+    gap: 130px;
+  }
 
-.fight-station-opponent {
-  gap: 80px;
-}
+  .fight-station-opponent {
+    gap: 80px;
+  }
 }
 
 @media screen and (max-width: 370px) {
@@ -270,25 +270,25 @@ defineProps({
   }
 
   .turn-title {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  color: white;
-}
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+  }
 
-.time-title {
-  font-size: 11px;
-  margin-top: -10px;
-}
+  .time-title {
+    font-size: 11px;
+    margin-top: -10px;
+  }
 
-.fight-station {
-  margin-top: -5px;
-  gap: 120px;
-}
+  .fight-station {
+    margin-top: -5px;
+    gap: 120px;
+  }
 
-.fight-station-opponent {
-  gap: 70px;
-}
+  .fight-station-opponent {
+    gap: 70px;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -315,25 +315,23 @@ defineProps({
   }
 
   .turn-title {
-  font-size: 13px;
-  color: white;
-}
+    font-size: 13px;
+    color: white;
+  }
 
-.time-title {
-  font-size: 11px;
-  margin-top: -10px;
-}
+  .time-title {
+    font-size: 11px;
+    margin-top: -10px;
+  }
 
-.fight-station {
-  margin-top: -5px;
-  gap: 100px;
-}
+  .fight-station {
+    margin-top: -5px;
+    gap: 100px;
+  }
 
-.fight-station-opponent {
-  gap: 60px;
-  margin-top: -2px;
-}
-
-
+  .fight-station-opponent {
+    gap: 0px;
+    margin-top: -2px;
+  }
 }
 </style>
