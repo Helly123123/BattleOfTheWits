@@ -59,7 +59,10 @@ defineProps({
           <p class="time-title">12h left</p>
         </div>
       </div>
-      <button class="play-button-opponent">Wait for the enemy's move</button>
+      <button class="play-button-opponent">
+        Wait for the<br />
+        enemy's move
+      </button>
     </div>
   </article>
 </template>
@@ -248,7 +251,21 @@ defineProps({
 
 @media screen and (max-width: 390px) {
   .fight-station-opponent {
-    gap: 50px;
+    gap: 90px;
+    margin-top: -0px;
+  }
+
+  .turn-title {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: white;
+  }
+
+  .play-button-opponent {
+    width: 100px;
+    height: 32px;
+    font-size: 11px;
   }
 }
 
@@ -278,7 +295,7 @@ defineProps({
   .turn-title {
     font-family: "Inter Tight", sans-serif;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 11px;
     color: white;
   }
 
@@ -321,7 +338,7 @@ defineProps({
   }
 
   .turn-title {
-    font-size: 13px;
+    font-size: 11px;
     color: white;
   }
 
