@@ -246,6 +246,12 @@ defineProps({
   }
 }
 
+@media screen and (max-width: 390px) {
+  .fight-station-opponent {
+    gap: 50px;
+  }
+}
+
 @media screen and (max-width: 370px) {
   .active-game-card {
     width: 350px;
