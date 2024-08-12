@@ -71,7 +71,11 @@ const completed = reactive([
           alt="out"
         />
         <div class="username-user-cont">
-          <img src="/main/userProfile/userIcon.svg" alt="userIcon" />
+          <img
+            class="img-user"
+            src="/main/userProfile/userIcon.svg"
+            alt="userIcon"
+          />
           <h2 class="user-name">@username</h2>
         </div>
         <img src="/main/userProfile/delete.svg" alt="out" />
@@ -111,7 +115,7 @@ const completed = reactive([
 <style scoped>
 .user-profile-cont {
   position: fixed;
-  top: 42%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -160,7 +164,6 @@ const completed = reactive([
   width: 100%;
   height: 250px;
   overflow-x: hidden;
-  margin-top: 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -220,6 +223,13 @@ const completed = reactive([
   align-items: center;
   justify-content: center;
   gap: 135px;
+}
+
+.user-history {
+  position: fixed;
+  top: 560px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .user-history-title {
@@ -338,131 +348,227 @@ const completed = reactive([
 }
 
 @media screen and (max-height: 850px) {
-  .card-cont {
-    width: 100%;
-    height: 230px;
-    overflow-x: hidden;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+  .user-history {
+    position: fixed;
+    top: 540px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .user-profile-cont {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
-@media screen and (max-height: 830px) {
-  .card-cont {
-    width: 100%;
-    height: 200px;
-    overflow-x: hidden;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+@media screen and (max-height: 820px) {
+  .user-history {
+    position: fixed;
+    top: 520px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .user-profile-cont {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 @media screen and (max-height: 800px) {
-  .card-cont {
-    width: 100%;
-    height: 180px;
-    overflow-x: hidden;
+  .user-history {
+    position: fixed;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .user-profile-cont {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .add-friend-button {
+    height: 50px;
+    font-size: 16px;
     margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .duel-button {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .user-statistic-cont {
+    height: 50px;
   }
 }
 
 @media screen and (max-height: 780px) {
-  .card-cont {
-    width: 100%;
-    height: 160px;
-    overflow-x: hidden;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+  .user-history {
+    position: fixed;
+    top: 480px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-}
+  .user-profile-cont {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-@media screen and (max-height: 760px) {
-  .card-cont {
-    width: 100%;
-    height: 140px;
-    overflow-x: hidden;
+  .add-friend-button {
+    height: 50px;
+    font-size: 16px;
     margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .duel-button {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .user-statistic-cont {
+    height: 50px;
+  }
+
+  .user-history-title {
+    font-size: 26px;
   }
 }
 
 @media screen and (max-height: 740px) {
-  .card-cont {
-    width: 100%;
-    height: 120px;
-    overflow-x: hidden;
+  .user-history {
+    position: fixed;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .user-profile-cont {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .add-friend-button {
+    height: 48px;
+    font-size: 16px;
     margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .duel-button {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .user-statistic-cont {
+    height: 48px;
+  }
+
+  .user-history-title {
+    font-size: 26px;
+  }
+
+  .img-user {
+    width: 90px;
   }
 }
 
 @media screen and (max-height: 720px) {
-  .card-cont {
-    width: 100%;
-    height: 100px;
-    overflow-x: hidden;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+  .user-history {
+    position: fixed;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-}
-@media screen and (max-height: 700px) {
+  .user-profile-cont {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .add-friend-button {
+    height: 48px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .duel-button {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .user-statistic-cont {
+    height: 48px;
+  }
+
+  .user-history-title {
+    font-size: 26px;
+  }
+
+  .img-user {
+    width: 90px;
+  }
+
   .card-cont {
     width: 100%;
-    height: 80px;
-    overflow-x: hidden;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+    height: 200px;
+    gap: 6px;
   }
 }
 
-@media screen and (max-height: 680px) {
-  .card-cont {
-    width: 100%;
-    height: 60px;
-    overflow-x: hidden;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+@media screen and (max-height: 690px) {
+  .user-history {
+    position: fixed;
+    top: 430px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-}
+  .user-profile-cont {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-@media screen and (max-height: 660px) {
+  .add-friend-button {
+    height: 48px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .duel-button {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .user-statistic-cont {
+    height: 48px;
+  }
+
+  .user-history-title {
+    font-size: 26px;
+  }
+
+  .img-user {
+    width: 90px;
+  }
+
   .card-cont {
     width: 100%;
-    height: 40px;
-    overflow-x: hidden;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
+    height: 190px;
+    gap: 6px;
   }
 }
 </style>
