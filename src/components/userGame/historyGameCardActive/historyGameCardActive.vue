@@ -265,7 +265,7 @@ defineProps({
   .play-button-opponent {
     width: 100px;
     height: 32px;
-    font-size: 11px;
+    font-size: 9px;
   }
 }
 
