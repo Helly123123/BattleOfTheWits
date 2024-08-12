@@ -178,7 +178,7 @@ import SupportSend from "./supportSend.vue";
 
   .support-cont-title {
     font-size: 20px;
-    width: 360px;
+    width: 340px;
   }
 }
 
@@ -220,36 +220,121 @@ import SupportSend from "./supportSend.vue";
 
 @media screen and (max-width: 340px) {
   .messgage-support-cont {
-    width: 320px;
+    width: 300px;
     height: 237px;
   }
 
   .messgage-support-cont-color {
-    width: 320px;
+    width: 300px;
     height: 237px;
     top: 96px;
   }
 
   .input-support {
-    width: 300px;
+    width: 280px;
     height: 44px;
     font-size: 14px;
   }
 
   .textarea-message {
-    width: 300px;
+    width: 280px;
     height: 100px;
     font-size: 14px;
   }
 
+  .support-cont-title {
+    font-size: 16px;
+    width: 340px;
+  }
+
   .send-message-button {
-    width: 320px;
+    width: 300px;
     height: 50px;
     font-size: 22px;
   }
   .support-cont-title {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .support-cont-title {
     font-size: 16px;
-    width: 320px;
+    width: 290px;
+  }
+}
+
+@media screen and (max-height: 820px) {
+  .support-cont-block {
+    width: 100%;
+    height: 650px;
+  }
+
+  .support-cont-title {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    width: 380px;
+    margin-top: 130px;
+  }
+
+  .support-title-cont {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .messgage-support-cont {
+    width: 388px;
+    height: 237px;
+    margin-top: -20px;
+  }
+
+  .messgage-support-cont-color {
+    width: 388px;
+    height: 237px;
+    top: 202px;
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .support-cont-block {
+    width: 100%;
+    height: 550px;
+  }
+
+  .support-cont-title {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    width: 380px;
+    margin-top: 220px;
+  }
+
+  .support-title-cont {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .messgage-support-cont {
+    width: 388px;
+    height: 237px;
+    margin-top: -20px;
+  }
+
+  .messgage-support-cont-color {
+    width: 388px;
+    height: 237px;
+    top: 292px;
   }
 }
 </style>

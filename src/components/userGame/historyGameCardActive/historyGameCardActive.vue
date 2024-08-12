@@ -330,7 +330,7 @@ defineProps({
   }
 
   .fight-station-opponent {
-    gap: 0px;
+    gap: 100px;
     margin-top: -2px;
   }
 }
