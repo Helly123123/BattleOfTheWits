@@ -230,7 +230,7 @@ provide("UserProfileStation", {
       <UserHeader />
       <button @click="duelStationOn" class="new-game-btn">
         <img src="/main/sword.svg" alt="" />
-        NEW GAME
+        NEW GAME!
         <img src="/main/sword.svg" alt="" />
       </button>
     </section>
