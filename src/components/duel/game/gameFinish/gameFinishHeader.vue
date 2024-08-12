@@ -106,14 +106,14 @@ header {
 
 @media screen and (max-width: 400px) {
   .header-section {
-    gap: 50px;
+    gap: 30px;
     margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 380px) {
   .header-section {
-    gap: 40px;
+    gap: 30px;
     margin-top: 20px;
   }
   .user-name {
