@@ -1,19 +1,15 @@
 <script setup>
 import Header from "./gameFinishHeader.vue";
 import ResultGame from "./resultFight.vue";
-import { ref } from "vue";
-const round = ref(false);
-const roundOn = () => {
-  round.value = true;
-  console.log("sds");
-};
-import YouLose from "./youLose.vue";
+import { inject } from "vue";
+const { youLoseStationOn } = inject("youLoseStation");
+const { duelStationOff } = inject("duelStation");
 </script>
 
 <template>
   <YouLose v-if="round" />
   <section v-if="!round">
-    <button @click="roundOn" class="nexts">Далее</button>
+    <button @click="youLoseStationOn" class="nexts">Далее</button>
     <Header />
     <section class="win-cont">
       <h2 class="win-title">You Win</h2>
@@ -22,7 +18,7 @@ import YouLose from "./youLose.vue";
     <div class="button-color-cont"></div>
     <div class="button-cont">
       <h1 class="elo-win-title">+15 <span class="elo-title">elo</span></h1>
-      <button class="home-button">HOME</button>
+      <button class="home-button" @click="duelStationOff">HOME</button>
     </div>
   </section>
 </template>

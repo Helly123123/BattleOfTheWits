@@ -20,6 +20,8 @@ const { SearchOponentOn, SearchOponent } = inject("SearchOponent");
 const { roundStation } = inject("roundStation");
 const { correctAnswer } = inject("correctAnswer");
 const { wrongAnswer } = inject("wrongAnswer");
+const { youWinStation } = inject("youWinStation");
+const { youLoseStation } = inject("youLoseStation");
 </script>
 
 <template>
@@ -29,8 +31,8 @@ const { wrongAnswer } = inject("wrongAnswer");
   <Round v-if="roundStation" />
   <CorrectAnswer v-if="correctAnswer" />
   <WrongAnswer v-if="wrongAnswer" />
-  <!-- <YouWin /> -->
-  <!-- <YouLose /> -->
+  <YouWin v-if="youWinStation" />
+  <YouLose v-if="youLoseStation" />
   <!-- <Ready /> -->
 </template>
 

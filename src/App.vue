@@ -21,6 +21,26 @@ const correctAnswer = ref(false);
 const wrongAnswer = ref(false);
 const SupportSendMessage = ref(false);
 const UserProfileStation = ref(false);
+const youWinStation = ref(false);
+const youLoseStation = ref(false);
+
+const youLoseStationOn = () => {
+  youLoseStation.value = true;
+  youWinStationOff();
+};
+
+const youLoseStationOff = () => {
+  youLoseStation.value = false;
+};
+
+const youWinStationOn = () => {
+  youWinStation.value = true;
+  wrongAnswerOff();
+};
+
+const youWinStationOff = () => {
+  youWinStation.value = false;
+};
 
 const UserProfileStationOn = () => {
   UserProfileStation.value = true;
@@ -114,6 +134,9 @@ const duelStationOn = () => {
 };
 const duelStationOff = () => {
   duelStation.value = false;
+  youWinStationOff();
+  youLoseStationOff();
+  console.log("sds");
 };
 
 const falseNavigation = () => {
@@ -162,6 +185,12 @@ provide("duelStation", {
   duelStationOff,
 });
 
+provide("youLoseStation", {
+  youLoseStation,
+  youLoseStationOn,
+  youLoseStationOff,
+});
+
 provide("SearchOponent", {
   SearchOponent,
   SearchOponentOn,
@@ -178,6 +207,12 @@ provide("enemyFoundStation", {
   enemyFoundStation,
   enemyFoundStationOn,
   enemyFoundStationOff,
+});
+
+provide("youWinStation", {
+  youWinStation,
+  youWinStationOn,
+  youWinStationOff,
 });
 
 provide("selectThemesStation", {

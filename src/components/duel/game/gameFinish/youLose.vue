@@ -1,6 +1,8 @@
 <script setup>
 import Header from "./gameFinishHeader.vue";
 import ResultGame from "./resultFight.vue";
+import { inject } from "vue";
+const { duelStationOff } = inject("duelStation");
 </script>
 
 <template>
@@ -12,7 +14,7 @@ import ResultGame from "./resultFight.vue";
   <div class="button-color-cont"></div>
   <div class="button-cont">
     <h1 class="elo-lose-title">-15 <span class="elo-title">elo</span></h1>
-    <button class="home-button">HOME</button>
+    <button @click="duelStationOff" class="home-button">HOME</button>
   </div>
 </template>
 

@@ -4,10 +4,7 @@ import Question from "./question.vue";
 
 import { inject, ref } from "vue";
 
-const round = ref(false);
-const roundOn = () => {
-  round.value = true;
-};
+const { youWinStationOn } = inject("youWinStation");
 </script>
 
 <template>
@@ -36,7 +33,7 @@ const roundOn = () => {
             <h1 class="answer-title">42</h1>
           </article>
         </section>
-        <button class="next-button">
+        <button @click="youWinStationOn" class="next-button">
           NEXT <img src="/main/duel/correctAnswer/NEXT.svg" alt="next" />
         </button>
       </section>
